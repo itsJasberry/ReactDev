@@ -1,0 +1,439 @@
+:root {
+    --purple-background-color: rgb(43, 45, 66);
+    --aqua-hover-color: aqua;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   background-color: rgb(237, 241, 245);
+}
+nav {
+    z-index: 2;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    height: 6vh;
+    background-color: var(--purple-background-color);
+}
+
+nav .links {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .links ul {
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+nav .links ul li {
+    padding-right: 50px;
+    height: 100%;
+}
+
+nav .links ul a {
+    height: 100%;
+    color: rgba(211, 213, 243, 0.8);
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+nav .links ul a:hover {
+    color: rgba(211, 213, 243, 1);
+
+}
+
+nav .links #dropDown {
+    display: none;
+    background-color: var(--purple-background-color);
+    box-sizing: border-box;
+    left: 0;
+    text-align: center;
+}
+
+ #dropDown ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+#dropDown ul li {
+    width: 100%;
+    padding: 3px 0;
+    text-align: center;
+}
+#dropDown ul li a{
+    width: 100%;
+   text-align: center;
+}
+
+#packageHover:hover #dropDown{
+    display: block;
+}
+
+
+nav .links #dropDown2 {
+    display: none;
+    background-color: var(--purple-background-color);
+    left: 0;
+}
+
+#dropDown2 ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+#dropDown2 ul li {
+    padding: 3px 0;
+}
+
+#packageHover2:hover #dropDown2{
+    display: block;
+}
+
+
+
+
+/* HERO SECTION */
+#img {
+    margin-bottom: 10px;
+    background-image: url("/Images/cover5.jpg");
+    background-size: cover;
+    background-position: center;
+    left: -1px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 1px solid #eee;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    -webkit-box-shadow: 36px 5px 32px -34px rgba(79, 14, 163, 1);
+    -moz-box-shadow: 36px 5px 32px -34px rgba(79, 14, 163, 1);
+    box-shadow: 36px 5px 32px -34px rgb(36, 18, 59);
+    background-color: rgba(43, 45, 66, 0.95);
+    padding: 7rem 0.8rem;
+    transition: all 0.5s ease;
+   
+}
+
+
+.sidebar.active {
+    width: 200px;
+}
+
+.bar1, .bar2, .bar3 {
+    background-color: white;
+    height: 2px;
+    width: 26px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;  
+    z-index: 5;
+    position: fixed;
+    left: 25px;
+    cursor: pointer;
+    margin-top: -40px;
+}
+
+
+.sidebar .top .logo {
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo {
+    opacity: 1;
+}
+.top .logo i {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+.user {
+    position: relative;
+    bottom: -15px;
+    margin-top: 20px;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user p {
+    color: #fff;
+    opacity: 1;
+    margin-left: 1rem;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.sidebar p {
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.sidebar.active p {
+    opacity: 1;
+}
+
+
+.sidebar ul li {
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    color: #fff; 
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover {
+    background-color: #fff;
+    color: #12171e;
+}
+.sidebar ul li a i {
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .nav-item {
+   display: none;
+}
+
+.sidebar.active .nav-item {
+    display: block;
+}
+
+
+
+
+.sidebar ul li .tooltip {
+    background-color: rgba(43, 45, 66, 0.95);
+    color: white;
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    border-radius:  0.6rem;
+    padding: 0.4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    display: none;
+}
+
+.sidebar ul li:hover .tooltip {
+  display: block;
+    
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+
+.container { 
+    margin: 0 auto 0 203px;
+    width: 80%;
+    min-height: 1200px;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+footer {
+    position: relative;
+    bottom: 0;
+    
+    width: 100%;
+    height: 70px;
+    background-color: var(--purple-background-color);
+}
+footer div {
+    height: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+}
+footer ul {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+footer li a {
+    text-decoration: none;
+    color: white;
+}
+footer li a:hover {
+    border-bottom: 2px solid white;
+}
+/* RESPONSIVE */
+
+@media only screen and (max-width: 780px) { 
+    nav {
+        position: relative;
+        padding: 10px 0;
+        top: -1px;
+        height: auto;
+   }
+    nav .links {
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+    }
+
+    nav .links ul {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        margin: 0;
+    }
+
+
+
+    .sidebar ul li .tooltip {
+        position: absolute;
+        left: 125px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+        border-radius:  0.6rem;
+        padding: 0.4rem 1.2rem;
+        line-height: 1.8rem;
+        z-index: 20;
+        opacity: 0;
+    }
+    
+    .sidebar ul li:hover{
+        opacity: 1;
+    }
+    
+    .sidebar ul li:hover .tooltip {
+      
+        opacity: 0;
+    }
+    
+    .sidebar.active ul li .tooltip {
+        display: none;
+    }
+
+
+
+    .container { 
+        width: 80%;
+        margin: 0 90px;
+    }
+    .content {
+        flex-direction: column;
+    }
+    footer {
+        position: relative;
+    }
+
+    footer ul {
+        width: 100%;
+        margin: 0;
+    }
+    footer a {
+        font-size: 12px;
+    }
+}
+
+.animateBar1 {
+    animation: flipBar1 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .animateBar2 {
+    animation: fadeBar2 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .animateBar3 {
+    animation: flipBar3 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes flipBar1 {
+    from {
+      transform: rotate(0);
+    }
+    to {
+        transform: rotate(45deg) translate(4px, 8px) ;
+    }
+  }
+  
+  
+   @keyframes fadeBar2 {
+      from {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+      to {
+        transform: scaleX(0);
+        opacity: 0;
+      }
+   }
+  
+   @keyframes flipBar3 {
+    from {
+      transform: rotate(0);
+    }
+    to {
+        transform: rotate(-45deg) translate(4px, -8px);
+    }
+  }

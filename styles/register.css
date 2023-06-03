@@ -1,0 +1,389 @@
+:root {
+    --purple-background-color: rgb(112, 0, 255);
+    --aqua-hover-color: aqua;
+}
+
+body {
+    font-family: Mukta, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.5px;
+    font-family: 'Bitter', serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+nav {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    height: 6vh;
+    background-color: var(--purple-background-color);
+}
+
+nav .links {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .links ul {
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+nav .links ul li {
+    padding-right: 50px;
+    height: 100%;
+}
+
+nav .links ul a {
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+nav .links ul a:hover {
+    color: aqua;
+}
+
+nav .links #dropDown {
+    display: none;
+    background-color: var(--purple-background-color);
+    box-sizing: border-box;
+    left: 0;
+    text-align: center;
+}
+
+ #dropDown ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+#dropDown ul li {
+    width: 100%;
+    padding: 3px 0;
+    text-align: center;
+}
+#dropDown ul li a{
+    width: 100%;
+   text-align: center;
+}
+
+#packageHover:hover #dropDown{
+    display: block;
+}
+
+
+nav .links #dropDown2 {
+    display: none;
+    background-color: var(--purple-background-color);
+    left: 0;
+}
+
+#dropDown2 ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+#dropDown2 ul li {
+    padding: 3px 0;
+}
+
+#packageHover2:hover #dropDown2{
+    display: block;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 110px 0;
+ 
+}
+
+
+.registerSpan {
+    font-size: 3rem;
+    font-weight: 700;
+    color: slateblue;
+    display: flex;
+    justify-content: center;
+  
+}
+
+
+figcaption {
+    text-align: center;
+    font-size: 24px;
+}
+
+
+fieldset {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.541);
+    border: 3px solid slateblue;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+
+.labelInputBox {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#zdjecie {
+    font-size: 20px;
+}
+#gender {
+    width: 50vh;
+    height: 36px;
+   font-size: 24px;
+}
+#gender option {
+    font-size:25px;
+}
+
+input {
+   border-radius: 5px;
+   width: 50vh;
+   height: 36px;
+   box-sizing: border-box;
+}
+.radio {
+   height: 20px;
+   width: 120px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 1px 1px 5px aliceblue, -1px -1px 5px slateblue;
+    /* offset x offset y blur radius */
+}
+input[type="password"]:focus {
+    outline: none;
+    box-shadow: 1px 1px 5px aliceblue, -1px -1px 5px slateblue;
+}
+
+
+
+input[type="text"] {
+    font-size: 24px;
+}
+input[type="password"] {
+    font-size: 24px;
+}
+
+
+#zainteresowaniaFieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#zainteresowaniaLabel {
+    font-size:20px;
+}
+#zainteresowania {
+    margin-top: 30px;
+    width: 50%;
+    font-size: 28px;
+}
+
+.radio-checkbox-style {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.btn {
+    width: 150px;
+    height: 50px;
+    margin: 0 30px 50px 30px;
+    background-color: rgb(102, 222, 233);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.2s ease;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+
+}
+.btn:hover {
+    background-color: rgba(102, 222, 233, 0.9);
+    transform: scale(0.95);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+
+
+
+
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--purple-background-color);
+}
+footer div {
+    height: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+}
+footer ul {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+footer li a {
+    text-decoration: none;
+    color: white;
+}
+footer li a:hover {
+    border-bottom: 2px solid white;
+}
+
+@media only screen and (max-width: 768px) {
+
+   nav {
+        position: relative;
+        padding: 10px 0;
+        top: -1px;
+        height: auto;
+   }
+    nav .links {
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+    }
+
+    nav .links ul {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        margin: 0;
+    }
+
+    .buttons {
+        width: 100vw;
+    }
+      
+    footer {
+        position: relative;
+    }
+    footer ul {
+        width: 100%;
+        margin: 0;
+    }
+    
+    footer a {
+        font-size: 12px;
+    }
+
+    /* Dla mobilnych i tabletow */
+
+    fieldset {
+        width: 80vw;
+        font-size: 1rem;
+        padding: 20px;
+
+    }
+   
+    
+    .inputs {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .radio {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .radio-checkbox-style {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+     
+    .labelInputBox {
+        flex-direction: column;
+    }
+
+    .labelInputBox label {
+        font-size: 25px;
+        padding-bottom: 30px;
+    }
+    label {
+        font-size: 12px;
+    }
+
+
+   
+    #gender {
+        width: 100%;
+        font-size: 10px;
+    }
+    .radio-checkbox-style {
+
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        
+    }
+    .radio-checkbox-style label{
+        width: 90%;
+     padding: 10px;
+    }
+
+    #zainteresowaniaFieldset .inputs {
+        width: 100%;
+    }
+    #zainteresowania {
+        font-size: 16px;
+    }
+
+    #zainteresowaniaFieldset p {
+        font-size: 25px;
+    }
+    p {
+        font-size: 25px;
+    }
+}
