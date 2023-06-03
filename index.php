@@ -9,6 +9,6 @@
 <body>
     <h1>Hello huberciku</h1>
     <a href="/dziubson.html">Siema dziubi</a>
-    <?php print("<a href='/tabela.php'>Siema dziubi</a>") ?>
+    <?php print("<a href='/tabela.php'>Siema grubi</a>") ?>
 </body>
 </html>
